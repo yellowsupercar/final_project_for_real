@@ -7,6 +7,7 @@ var enemy3 = makeImage("http://pngimg.com/uploads/cat/cat_PNG1615.png", 80,-115,
 var enemy4 = makeImage("http://pngimg.com/uploads/dog/dog_PNG193.png",35,-80,20,15)
 var enemy5 = makeImage("http://data.whicdn.com/images/86702777/original.png",90,-80,20,15)
 var star = makeImage("http://pics.sc.chinaz.com/Files/pic/icons128/yx_9/Shine%20Sprite.png",30,-15,20,13)
+var star2 = makeImage("http://pics.sc.chinaz.com/Files/pic/icons128/yx_9/Shine%20Sprite.png",140,-115,20,13)
 var main = makeImage("http://vignette1.wikia.nocookie.net/fantendoii/images/2/27/Mario_Spinning_Animated_Sprite_by_longcat93.gif/revision/latest?cb=20110821002847", 76, 22, 50, 75)
 var score =0;
 var scoreLabel = makeText("Score : "+ score, 0, 15, 18, "red")
@@ -19,6 +20,7 @@ function moveEnemies(){
   move(enemy4,0,1)
   move(enemy5,0,1)
   move(star,0,1)
+  move(star2,0,1)
 
 
 
@@ -28,6 +30,7 @@ function moveEnemies(){
   var y4 = getY(enemy4)
   var y5 = getY(enemy5)
   var y6 = getY(star)
+  var y7 = getY(star2)
 
   if(y1 > 57){
 
@@ -51,14 +54,22 @@ function moveEnemies(){
     } if (y5 > 57) {
 
          setY(enemy5,-70)
-} if (star > 57) {
-  setY(star,-40)}
+
+} if (y6 > 57) {
+
+  setY(star,-160)
+}
+if (y7 > 57) {
+  setY(star2,-320) }
 
 
 
-
+  if(collides(main,enemy1)||collides(main,enemy2)||collides(main,enemy3)||collides(main,enemy4)||collides(main,enemy5)){
+      makeText("GAME OVER!",33,50,20,"Blue")
+      alert("GAME OVER!") } else {
 
   requestAnimationFrame(moveEnemies)
+}
 }
 
 addEventListener('keydown', movemain)
@@ -84,15 +95,14 @@ function movemain(event)
     move(main,10,0)
 
     }
-if(collides(main,enemy1)||collides(main,enemy2)||collides(main,enemy3)||collides(main,enemy4)||collides(main,enemy5)){
-    makeText("GAME OVER!",33,50,20,"Blue")
-    alert("GAME OVER!")
-    
-if(collides(main,star)){
+
+
+if(collides(main,star)||collides(main,star2)){
+  score=score+1
       scoreLabel.innerHTML = "Score : "+score;
 }
 }
-}
+
 
 
 

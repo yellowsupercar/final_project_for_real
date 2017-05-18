@@ -6,8 +6,8 @@ var enemy2 = makeImage("http://www.partnershipforpets.org/images/bigstock_Kitten
 var enemy3 = makeImage("http://pngimg.com/uploads/cat/cat_PNG1615.png", 80,-115,20,15)
 var enemy4 = makeImage("http://pngimg.com/uploads/dog/dog_PNG193.png",35,-80,20,15)
 var enemy5 = makeImage("http://data.whicdn.com/images/86702777/original.png",90,-80,20,15)
-var star = makeImage("http://pics.sc.chinaz.com/Files/pic/icons128/yx_9/Shine%20Sprite.png",30,-15,20,13)
-var star2 = makeImage("http://pics.sc.chinaz.com/Files/pic/icons128/yx_9/Shine%20Sprite.png",140,-115,20,13)
+var star = makeImage("http://pics.sc.chinaz.com/Files/pic/icons128/yx_9/Shine%20Sprite.png",30,-15,10,13)
+var star2 = makeImage("http://pics.sc.chinaz.com/Files/pic/icons128/yx_9/Shine%20Sprite.png",140,-115,10,13)
 var main = makeImage("http://vignette1.wikia.nocookie.net/fantendoii/images/2/27/Mario_Spinning_Animated_Sprite_by_longcat93.gif/revision/latest?cb=20110821002847", 76, 22, 50, 75)
 var score =0;
 var scoreLabel = makeText("Score : "+ score, 0, 15, 18, "red")
